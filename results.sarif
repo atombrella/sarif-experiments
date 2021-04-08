@@ -1,0 +1,556 @@
+{
+  "version": "2.1.0", 
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json", 
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeSonar", 
+          "fullName": "CodeSonar 6.0p0.20210310-x86_64-pc-linux", 
+          "version": "6.0p0", 
+          "semanticVersion": "6.0.0",
+          "informationUri": "http://www.grammatech.com/codesonar",
+          "rules": [
+              {
+                  "id": "Basic Numerical Type Used",
+                  "shortDescription": { "text": "Basic Numerical Type Used"},
+                  "fullDescription": {"text": "This is the full description. Link: http://www.grammatech.com"},
+                  "help": {"text": "This is the help text. Link: http://www.grammatech.com"}
+              },
+              {
+                  "id": "Condition Is Not Boolean",
+                  "shortDescription": { "text": "Condition Is Not Boolean"},
+                  "fullDescription": {"text": "This is the full description"},
+                  "help": {"text": "This is the help text"}
+              },
+              {
+                "id": "Pointed-to Type Could Be const",
+                "shortDescription": { "text": "Pointed-to Type Could Be const"},
+                "fullDescription": {"text": "This is the full description"},
+                "help": {"text": "This is the help text"}
+              },
+              {
+                "id": "Unused Parameter",
+                "shortDescription": { "text": "Unused Parameter"},
+                "fullDescription": {"text": "This is the full description"},
+                "help": {"text": "This is the help text"}
+              },
+              {
+                "id": "Missing External Declaration",
+                "shortDescription": { "text": "Missing External Declaration"},
+                "fullDescription": {"text": "This is the full description"},
+                "help": {"text": "This is the help text"}
+              },
+              {
+                "id": "Division By Zero",
+                "shortDescription": { "text": "Division By Zero"},
+                "fullDescription": {"text": "This is the full description"},
+                "help": {"text": "This is the help text"}
+              },
+              {
+                "id": "Missing Return Statement",
+                "shortDescription": { "text": "Missing Return Statement"},
+                "fullDescription": {"text": "This is the full description"},
+                "help": {"text": "This is the help text"}
+              }
+        ]
+        }
+      }, 
+      "invocations": [
+        {
+          "startTimeUtc": "2021-03-10T19:20:20.104504Z", 
+          "endTimeUtc": "2021-03-10T19:20:36.195017Z", 
+          "executionSuccessful": true, 
+          "machine": "riddle2", 
+          "account": "paul"
+        }
+      ], 
+      "originalUriBaseIds": {
+        "SRCROOT0": {
+          "uri": "file:///home/runner/work/sarif-analysis-test/sarif-analysis-test/"
+        }
+      }, 
+      "artifacts": [
+        {
+          "location": {
+            "uri": "one.c", 
+            "uriBaseId": "SRCROOT0"
+          }, 
+          "mimeType": "text/x-c", 
+          "hashes": {
+            "LOOKUP3-FILENAME+CONTENT": "34f5aaa3fdbc016b"
+          }
+        }
+      ], 
+      "results": [
+        {
+          "ruleId": "Basic Numerical Type Used", 
+          "level": "warning", 
+          "message": {
+            "text": "Basic type int is used in this declaration.  - For improved safety and transparency, many standards recommend using typedefs to make size and signedness explicit."
+          }, 
+          "locations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Basic type int is used in this declaration.  - For improved safety and transparency, many standards recommend using typedefs to make size and signedness explicit."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "8ad83989ff0c7f88", 
+            "codesonarFingerprint": "8ad83989ff0c7f88"
+          }, 
+          "partialFingerprints": {
+            "codesonarCluster": "8ad83989ff0c7f88", 
+            "codesonarFingerprint": "8ad83989ff0c7f88"
+          }, 
+          "relatedLocations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Basic type int is used in this declaration.  - For improved safety and transparency, many standards recommend using typedefs to make size and signedness explicit."
+              }
+            }
+          ], 
+          "rank": 45.0166015625, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356679.html"
+        }, 
+        {
+          "ruleId": "Condition Is Not Boolean", 
+          "level": "warning", 
+          "message": {
+            "text": "Violation of MISRA C:2012 14.4: The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type."
+          }, 
+          "locations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 4, 
+                  "startColumn": 1, 
+                  "endColumn": 12
+                }
+              }, 
+              "message": {
+                "text": "Violation of MISRA C:2012 14.4: The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "6819a5304b48e8bd", 
+            "codesonarFingerprint": "b7f5da7d2a7a7b10"
+          }, 
+          "relatedLocations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 4, 
+                  "startColumn": 1, 
+                  "endColumn": 12
+                }
+              }, 
+              "message": {
+                "text": "Violation of MISRA C:2012 14.4: The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type."
+              }
+            }
+          ], 
+          "rank": 50.0, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356680.html"
+        }, 
+        {
+          "ruleId": "Pointed-to Type Could Be const", 
+          "level": "warning", 
+          "message": {
+            "text": "Variable s could be declared as a pointer (or reference) to a const-qualified type.  Violation of Misra C:2012 8.13: A pointer should point to a const-qualified type whenever possible."
+          }, 
+          "locations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Variable s could be declared as a pointer (or reference) to a const-qualified type.  Violation of Misra C:2012 8.13: A pointer should point to a const-qualified type whenever possible."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "28279a51b79d5963", 
+            "codesonarFingerprint": "28279a51b79d5963"
+          }, 
+          "relatedLocations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Variable s could be declared as a pointer (or reference) to a const-qualified type.  Violation of Misra C:2012 8.13: A pointer should point to a const-qualified type whenever possible."
+              }
+            }
+          ], 
+          "rank": 45.0166015625, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356681.html"
+        }, 
+        {
+          "ruleId": "Unused Parameter", 
+          "level": "warning", 
+          "message": {
+            "text": "s is not used in this scope."
+          }, 
+          "locations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "s is not used in this scope."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "30314c029ab8a163", 
+            "codesonarFingerprint": "30314c029ab8a163"
+          }, 
+          "relatedLocations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "s is not used in this scope."
+              }
+            }
+          ], 
+          "rank": 45.0166015625, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356683.html"
+        }, 
+        {
+          "ruleId": "Missing External Declaration", 
+          "level": "warning", 
+          "message": {
+            "text": "Identifier one has no extern declarations.  Violation of MISRA C:2012 8.5: An external object or function shall be declared once in one and only one file. This rule applies to non-defining declarations only."
+          }, 
+          "locations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Identifier one has no extern declarations.  Violation of MISRA C:2012 8.5: An external object or function shall be declared once in one and only one file. This rule applies to non-defining declarations only."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "748dba1cafef0acd", 
+            "codesonarFingerprint": "748dba1cafef0acd"
+          }, 
+          "relatedLocations": [
+            {
+              "id": 1, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 2, 
+                  "startColumn": 1, 
+                  "endColumn": 25
+                }
+              }, 
+              "message": {
+                "text": "Identifier one has no extern declarations.  Violation of MISRA C:2012 8.5: An external object or function shall be declared once in one and only one file. This rule applies to non-defining declarations only."
+              }
+            }
+          ], 
+          "rank": 50.0, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356684.html"
+        }, 
+        {
+          "ruleId": "Division By Zero", 
+          "level": "error", 
+          "message": {
+            "text": "A value is divided by 0.The issue can occur if the highlighted code executes."
+          }, 
+          "locations": [
+            {
+              "id": 2, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 6, 
+                  "startColumn": 9, 
+                  "endColumn": 12
+                }
+              }, 
+              "logicalLocations": [
+                {
+                  "name": "one"
+                }
+              ], 
+              "message": {
+                "text": "A value is divided by 0.The issue can occur if the highlighted code executes."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "a0ef875ecaeac191", 
+            "codesonarFingerprint": "eadfae6164e2c52f"
+          }, 
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 1, 
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "one.c"
+                          }, 
+                          "region": {
+                            "startLine": 4, 
+                            "startColumn": 1, 
+                            "endColumn": 12
+                          }
+                        }, 
+                        "logicalLocations": [
+                          {
+                            "name": "one"
+                          }
+                        ], 
+                        "message": {
+                          "text": "Taking true branch.  *p evaluates to true."
+                        }
+                      }, 
+                      "kinds": [
+                        "branch true"
+                      ], 
+                      "nestingLevel": 1
+                    }, 
+                    {
+                      "location": {
+                        "id": 2, 
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "one.c"
+                          }, 
+                          "region": {
+                            "startLine": 6, 
+                            "startColumn": 9, 
+                            "endColumn": 12
+                          }
+                        }, 
+                        "logicalLocations": [
+                          {
+                            "name": "one"
+                          }
+                        ], 
+                        "message": {
+                          "text": "A value is divided by 0.The issue can occur if the highlighted code executes."
+                        }
+                      }, 
+                      "nestingLevel": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ], 
+          "rank": 65.33823013305664, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356685.html"
+        }, 
+        {
+          "ruleId": "Missing Return Statement", 
+          "level": "error", 
+          "message": {
+            "text": "  - one() is missing a return statement here.  - This function should return a value of type int.The issue can occur if the highlighted code executes."
+          }, 
+          "locations": [
+            {
+              "id": 3, 
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "one.c"
+                }, 
+                "region": {
+                  "startLine": 8, 
+                  "startColumn": 1, 
+                  "endColumn": 2
+                }
+              }, 
+              "logicalLocations": [
+                {
+                  "name": "one"
+                }
+              ], 
+              "message": {
+                "text": "  - one() is missing a return statement here.  - This function should return a value of type int.The issue can occur if the highlighted code executes."
+              }
+            }
+          ], 
+          "fingerprints": {
+            "codesonarCluster": "f264972d3c1abceb", 
+            "codesonarFingerprint": "1297cb7f901fa3b9"
+          }, 
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "id": 1, 
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "one.c"
+                          }, 
+                          "region": {
+                            "startLine": 2, 
+                            "startColumn": 5, 
+                            "endColumn": 25
+                          }
+                        }, 
+                        "logicalLocations": [
+                          {
+                            "name": "one"
+                          }
+                        ], 
+                        "message": {
+                          "text": "one()'s return type is int."
+                        }
+                      }, 
+                      "nestingLevel": 1
+                    }, 
+                    {
+                      "location": {
+                        "id": 2, 
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "one.c"
+                          }, 
+                          "region": {
+                            "startLine": 4, 
+                            "startColumn": 1, 
+                            "endColumn": 12
+                          }
+                        }, 
+                        "logicalLocations": [
+                          {
+                            "name": "one"
+                          }
+                        ], 
+                        "message": {
+                          "text": "Skipping \"if\".  *p evaluates to false."
+                        }
+                      }, 
+                      "kinds": [
+                        "branch false"
+                      ], 
+                      "nestingLevel": 1
+                    }, 
+                    {
+                      "location": {
+                        "id": 3, 
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "one.c"
+                          }, 
+                          "region": {
+                            "startLine": 8, 
+                            "startColumn": 1, 
+                            "endColumn": 2
+                          }
+                        }, 
+                        "logicalLocations": [
+                          {
+                            "name": "one"
+                          }
+                        ], 
+                        "message": {
+                          "text": "  - one() is missing a return statement here.  - This function should return a value of type int.The issue can occur if the highlighted code executes."
+                        }
+                      }, 
+                      "nestingLevel": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ], 
+          "rank": 67.08296966552734, 
+          "hostedViewerUri": "http://riddle2:9460/warninginstance/1356686.html"
+        }
+      ]
+    }
+  ]
+}
